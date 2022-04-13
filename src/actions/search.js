@@ -9,8 +9,8 @@ var handleVideoSearch = (q) => {
   //TODO:  Write an asynchronous action to handle a video search!
   return (dispatch) => {
     var success = function(data) {
-      dispatch(currentVideo(data[0]));
-      dispatch(videoList(data));
+      dispatch(changeVideo(data[0]));
+      dispatch(changeVideoList(data));
     };
     searchYouTube({YOUTUBE_API_KEY, q}, success);
   };
