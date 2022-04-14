@@ -9,4 +9,6 @@ var preloadedState = {
   currentVideo: exampleVideoData[0]
 };
 
-export default createStore(rootReducer, preloadedState, applyMiddleware(thunk));
+var configureStore = createStore(rootReducer, preloadedState, applyMiddleware(thunk));
+
+export default configureStore;
