@@ -11,7 +11,7 @@ var mapStateToProps = function (state) {
 var mapDispatchToProps = function (dispatch) {
   return {
     handleVideoListEntryTitleClick: function (event) {
-      dispatch(changeVideo(event.script));
+      dispatch(changeVideo(event));
     }
   };
 };

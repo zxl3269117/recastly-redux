@@ -19,9 +19,9 @@ class App extends React.Component {
   //   this.getYouTubeVideos('react tutorials');
   // }
 
-  // handleVideoListEntryTitleClick(video) {
-  //   this.setState({currentVideo: video});
-  // }
+  handleVideoListEntryTitleClick(video) {
+    this.setState({currentVideo: video});
+  }
 
   // getYouTubeVideos(query) {
   //   var options = {

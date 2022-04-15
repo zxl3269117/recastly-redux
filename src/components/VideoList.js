@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import VideoListEntry from './VideoListEntry.js';
 
-var VideoList = ({videos, handleVideoListEntryTitleClick}) => (
+var VideoList = (props) => (
   <div className="video-list">
     {
-      videos.map(video => (
+      props.videos.map(video => (
         <VideoListEntry
           key={video.etag}
           video={video}
-          handleVideoListEntryTitleClick={handleVideoListEntryTitleClick}
+          handleVideoListEntryTitleClick={props.handleVideoListEntryTitleClick}
         />
       ))
     }
@@ -21,3 +21,6 @@ VideoList.propTypes = {
 };
 
 export default VideoList;
+
+// props {videos: videos, handleVideoListEntryTitleClick: handleVideoListEntryTitleClick, ....}
+// {videos, handleVideoListEntryTitleClick}

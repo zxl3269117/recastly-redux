@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import VideoPlayer from '../components/VideoPlayer.js';
 
 var mapStateToProps = (state) => {
-  console.log(state);
   return {
     video: state.currentVideo
   };
