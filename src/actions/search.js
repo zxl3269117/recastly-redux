@@ -11,7 +11,7 @@ var handleVideoSearch = (q) => {
   return (dispatch) => {
     var success = function(data) {
       console.log(data);
-      searchYouTubeDetails({key: YOUTUBE_API_KEY, id: 'eX2qFMC8cFo'}, (data) => { console.log(data); });
+      searchYouTubeDetails({key: YOUTUBE_API_KEY, id: data[0].id.videoId}, (data) => { console.log(data); });
       dispatch(changeVideo(data[0]));
       dispatch(changeVideoList(data));
     };

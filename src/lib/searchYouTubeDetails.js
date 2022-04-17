@@ -1,11 +1,8 @@
 var searchYouTubeDetails = ({key, id}, callback) => {
-  $.get('https://www.googleapis.com/youtube/v3/commentThreads', {
+  $.get('https://www.googleapis.com/youtube/v3/videos', {
     part: 'snippet',
     key: key,
-    videoId: id,
-    // maxResults: max,
-    // type: 'video',
-    // videoEmbeddable: 'true'
+    videoId: id
   })
     .done(({items}) => {
       if (callback) {
